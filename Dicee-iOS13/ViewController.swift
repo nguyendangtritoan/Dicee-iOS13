@@ -31,45 +31,12 @@ class ViewController: UIViewController {
         })
     }
     func changeUIImage(){
-        let numDice1 = Int.random(in: 1...6)
-        let nameImage: String
-        switch numDice1 {
-        case 1:
-            nameImage = "DiceOne"
-        case 2:
-            nameImage = "DiceTwo"
-        case 3:
-            nameImage = "DiceThree"
-        case 4:
-            nameImage = "DiceFour"
-        case 5:
-            nameImage = "DiceFive"
-        case 6:
-            nameImage = "DiceSix"
-        default:
-            nameImage = "DiceOne"
-        }
-        
-        let numDice2 = Int.random(in: 1...6)
-        let nameImage2: String
-        switch numDice2 {
-        case 1:
-            nameImage2 = "DiceOne"
-        case 2:
-            nameImage2 = "DiceTwo"
-        case 3:
-            nameImage2 = "DiceThree"
-        case 4:
-            nameImage2 = "DiceFour"
-        case 5:
-            nameImage2 = "DiceFive"
-        case 6:
-            nameImage2 = "DiceSix"
-        default:
-            nameImage2 = "DiceOne"
-        }
-        FirstDice.image = UIImage(named: nameImage)
-        SecondDice.image = UIImage(named: nameImage2)
+        let numDice1 = Int.random(in: 0...5)
+        let numDice2 = Int.random(in: 0...5)
+        let nameImage : [String] = ["DiceOne","DiceTwo", "DiceThree","DiceFour","DiceFive","DiceSix"]
+  
+        FirstDice.image = UIImage(named: nameImage[numDice1])
+        SecondDice.image = UIImage(named: nameImage[numDice2])
     }
 }
 
